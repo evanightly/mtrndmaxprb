@@ -1,4 +1,6 @@
 const form = document.querySelector('form')
+const outputs = document.querySelectorAll('tbody td:nth-of-type(even)')
+const [outMin, outRange, outMax] = outputs
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -13,7 +15,6 @@ form.addEventListener('submit', (e) => {
         max = min + calc
     }
 
-    const [outMin, outRange, outMax] = document.querySelectorAll('tbody td:nth-of-type(even)')
     outMin.innerText = 0 + min
     outRange.innerText = `${min}...${max}`
     outMax.innerText = max
