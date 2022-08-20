@@ -2,6 +2,7 @@ const form = document.querySelector('form')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+
     let [calc, calc2] = form.elements
     calc = eval(calc.value)
     calc2 = parseInt(calc2.value)
@@ -10,8 +11,10 @@ form.addEventListener('submit', (e) => {
     if (calc < calc2) {
         min = calc2
         max = min + calc
-    } else {
     }
-    const output = document.querySelector('.output')
-    output.innerText = `Possibilities: Min:${0 + min} Range:{${min}...${max}} Max:${max}`
+
+    const [outMin, outRange, outMax] = document.querySelectorAll('tbody td:nth-of-type(even)')
+    outMin.innerText = 0 + min
+    outRange.innerText = `${min}...${max}`
+    outMax.innerText = max
 })
