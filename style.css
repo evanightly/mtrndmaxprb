@@ -59,13 +59,15 @@ h4 {
   font-size: 1rem;
 }
 
-.content .form-group input:hover ~ .popover {
+.content .form-group input:hover ~ .popover,
+.content .form-group input:focus ~ .popover {
   color: #0f0f0f;
   top: -100%;
   left: 15%;
 }
 
-.content .form-group input:hover ~ .popover.downside {
+.content .form-group input:hover ~ .popover.downside,
+.content .form-group input:focus ~ .popover.downside {
   top: 100%;
   left: 15%;
 }
