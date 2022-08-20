@@ -21,6 +21,7 @@ form,
 .form-group {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -73,10 +74,6 @@ form,
 .content button:hover {
   border: 1px solid rgb(94, 221, 9);
   color: rgb(94, 221, 9);
-}
-
-.content .output {
-  margin-top: 1.5rem;
 }
 
 input:focus {
