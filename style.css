@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 2rem;
+}
+
+h4 {
+  margin-right: 0.5rem;
+}
+
+.content,
+form,
+.form-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content .form-group label {
+  font-size: 1.2rem;
+}
+
+.content .form-group input {
+  padding: 0.2rem 1rem;
+  border: 1px solid #0f0f0f;
+  border-left: 0;
+  border-right: 0;
+}
+
+.content .form-group {
+  position: relative;
+  background: orangered;
+}
+
+.content input:hover ~ .popover {
+  color: #0f0f0f;
+  top: -100%;
+  left: 15%;
+}
+
+.content input:hover ~ .popover.downside {
+  top: 100%;
+  left: 15%;
+}
+
+.content .form-group .popover {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  color: transparent;
+  translate: -50%, -50%;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.content button {
+  padding: 0.2rem 1rem;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border 0.2s linear, color 0.2s;
+}
+
+.content button:hover {
+  border: 1px solid rgb(94, 221, 9);
+  color: rgb(94, 221, 9);
+}
+
+.content .output {
+  margin-top: 1.5rem;
+}
+
+input:focus {
+  outline: none;
+}
